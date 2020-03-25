@@ -25,3 +25,13 @@ jobs:
           column-name: 'test2'
           label-name: 'test2'
           columns-to-ignore: 'done'
+          
+      - name: test3 issue to project 
+        uses: konradpabjan/move-labeled-or-milestoned-issue@v2.0
+        if: contains(github.event.issue.labels.*.name, '3')
+        with:
+          action-token: '${{ secrets.GH_TOKEN }}'
+          project-url: 'https://github.com/God-2333/test-actions/projects/1'
+          column-name: 'test3'
+          label-name: 'TEST3'
+          columns-to-ignore: 'done'
