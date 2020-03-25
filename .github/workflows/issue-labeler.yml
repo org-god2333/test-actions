@@ -11,5 +11,4 @@ jobs:
       with:
         repo-token: "${{ secrets.GH_TOKEN }}"
         configuration-path: .github/labeler.yml
-        enable-versioned-regex: 1
-        versioned-regex: 'issue_labeler_regex_version=(\d+)'
+        enable-versioned-regex: 0
