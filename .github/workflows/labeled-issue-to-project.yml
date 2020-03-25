@@ -33,7 +33,7 @@ jobs:
           
       - name: test3 issue to project 
         uses: konradpabjan/move-labeled-or-milestoned-issue@v2.0
-        if: contains(github.event.issue.labels.*.name, 'app')
+        if: contains(join(github.event.issue.labels.*.name), 'app')
         with:
           action-token: '${{ secrets.GH_TOKEN }}'
           project-url: 'https://github.com/God-2333/test-actions/projects/1'
