@@ -6,6 +6,9 @@ jobs:
   labeled-issue-to-project:
     runs-on: ubuntu-latest
     steps:
+      - name: test
+        run: echo ${{ github.event.issue.labels.*.name }}
+
       - name: test1 issue to project
         uses: konradpabjan/move-labeled-or-milestoned-issue@v2.0
         if: contains(github.event.issue.labels.*.name, 'test1')
