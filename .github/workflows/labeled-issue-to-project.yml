@@ -7,7 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: test
-        run: echo toJSON(github.event.issue.labels.*.name)
+        env:
+          label: tojson(github.event.issue.labels.*.name)
+        run: echo $label
 
       - name: test1 issue to project
         uses: konradpabjan/move-labeled-or-milestoned-issue@v2.0
