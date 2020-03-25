@@ -1,4 +1,2 @@
-high: 
-  - '\*\*优先级\*\*\r\n高'
-critical:
-  - '(critical|urgent)'
+high: '\*\*优先级\*\*\r\n高'
+critical: '(critical|urgent)'
