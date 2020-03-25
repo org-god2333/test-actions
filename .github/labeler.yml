@@ -2,4 +2,7 @@
 issue_labeler_regex_version=1
 --!>
 
-high: '高'
+high: 
+  - '**优先级**\r\n高'
+critical:
+  - '(critical|urgent)'
