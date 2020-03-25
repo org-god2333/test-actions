@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: test
         env:
-          label: tojson(github.event.issue.labels.*.name)
+          label: ${{ toJSON(github.event.issue.labels.*.name) }}
         run: echo $label
 
       - name: test1 issue to project
