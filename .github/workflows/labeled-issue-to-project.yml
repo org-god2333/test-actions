@@ -3,10 +3,11 @@ on:
   issues:
     types: [labeled]
 jobs:
-  test1-issue-to-project:
+  labeled-issue-to-project:
     runs-on: ubuntu-latest
     steps:
-      - uses: konradpabjan/move-labeled-or-milestoned-issue@v2.0
+      - name: test1 issue to project
+        uses: konradpabjan/move-labeled-or-milestoned-issue@v2.0
         if: contains(github.event.issue.labels.*.name, 'test1')
         with:
           action-token: '${{ secrets.GH_TOKEN }}'
@@ -15,10 +16,8 @@ jobs:
           label-name: 'test1'
           columns-to-ignore: 'done'
 
-  test2-issue-to-project:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: konradpabjan/move-labeled-or-milestoned-issue@v2.0
+      - name: test2 issue to project 
+        uses: konradpabjan/move-labeled-or-milestoned-issue@v2.0
         if: contains(github.event.issue.labels.*.name, 'test2')
         with:
           action-token: '${{ secrets.GH_TOKEN }}'
