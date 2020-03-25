@@ -1,4 +1,4 @@
 high: 
-  - '**优先级**\r\n高'
+  - '**优先级**\\r\\n高'
 critical:
   - '(critical|urgent)'
